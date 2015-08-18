@@ -28,8 +28,8 @@ makeCacheMatrix <- function(x = matrix()) {
         }
         
         # return list of functions to be used outside. name every elements to use readily
-        list(storeInvMtrx = storeInvMtrx, getInvMatrx = getInvMatrx, 
-             getOriMtrx = getOriMtrx, renewOriMtrx )
+        list(storeInvMtrx = storeInvMtrx, getInvMtrx = getInvMtrx, 
+             getOriMtrx = getOriMtrx, renewOriMtrx = renewOriMtrx )
 }
 
 
@@ -43,7 +43,7 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         
         # get cached inversematrix
-        inversematrix <- x$getInvMatrx()
+        inversematrix <- x$getInvMtrx()
         
         # if not calculated so that no value for inversematrix,
         # calculate and assign
