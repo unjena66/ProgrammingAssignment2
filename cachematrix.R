@@ -47,7 +47,7 @@ cacheSolve <- function(x, ...) {
         
         # if not calculated so that no value for inversematrix,
         # calculate and assign
-        if(is.null(inversematrix) == TRUE){
+        if(is.null(inversematrix)){
                 originalmatrix <- x$getOriMtrx()
                 inversematrix <- solve(originalmatrix)
                 x$storeInvMtrx(inversematrix)
